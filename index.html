@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plag Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <div class="score_panel" id="score_panel">
+            <div class="score_panel_item">
+                ROCK <br>PAPER<br>SCISSORS
+            </div>
+            <div class="score_panel_item">
+                <p>COMPUTER <br> SCORE <br><span id="computer_score">0</span> </p>
+
+            </div>
+            <div class="score_panel_item">
+                <p>YOUR <br> SCORE <br><span id="your_score">0</span></p>
+
+            </div>
+
+        </div>
+        <div class="play_screen" id="play_screen">
+            <div class="rock" onclick="play(2)">
+                <img src="icons8-fist-67 1.png" alt="" class="centered-image">
+            </div>
+            <div class="scissor" onclick="play(1)">
+                <img src="scissor.png" alt="" class="centered-image">
+            </div>
+            <div class="paper" onclick="play(0)">
+                <img src="paper.png" alt="" class="centered-image">
+            </div>
+            <div class="rock_scissor"></div>
+            <div class="scissor_paper"></div>
+            <div class="rock_paper"></div>
+        </div>
+        <div class="win_screen" style="visibility: hidden;" id="win_screen">
+            <p class="you_picked_text">YOU PICKED</p>
+            <div class="you_picked" id="you_picked">
+                <img src="icons8-fist-67 1.png" alt="" id="test" class="centered-image">
+            </div>
+            <div class="score_text">
+                <p class="result_message" id="result_message">YOU WIN<br><span>AGAINST PC</span></p>
+                <button class="btn_play_again" onclick="play_again()">PLAY AGAIN</button>
+
+            </div>
+            <p class="computer_picked_text">PC PICKED</p>
+            <div class="computer_picked" id="computer_picked">
+                <img src="icons8-fist-67 1.png" alt="" class="centered-image">
+            </div>
+        </div>
+        <div class="win_final_screen" style="visibility: hidden;" id="win_final_screen">
+            <div class="user_win_graphic ">
+                <img src="cup.png" alt="">
+                <p class="hurray">HURRAY!!</p>
+                <p class="won">YOU WON THE GAME</p>
+                <button class="btn_play_again_win" onclick="play_again()">PLAY AGAIN</button>
+            </div>
+
+        </div>
+        <div class="rules_box" id="rules_box">
+            <div class="close_rule" id="close_rule">
+                <p class="close" onclick="close_btn()">X</p>
+            </div>
+            <div class="rule_box_inner_box">
+                <p>Game Rules</p>
+                <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper, scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <button class="rules" id="rules" onclick="toggle_rule()">
+            RULES
+        </button>
+        <button class="winner_screen" id="winner_screen" onclick="next()">
+            NEXT
+        </button>
+
+    </div>
+
 </body>
+
 </html>

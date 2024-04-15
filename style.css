@@ -1,0 +1,488 @@
+.wrapper {
+    max-width: 100vw;
+    height: 738px;
+    background-color: #8CC461;
+    padding-top: 62px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.score_panel {
+    width: 800px;
+    height: 158px;
+    gap: 0px;
+    border-radius: 13px;
+    border: 2px solid white;
+    margin: 0px auto;
+    display: flex;
+    padding-bottom: 10px;
+
+}
+
+.score_panel_item {
+    font-family: "Roboto";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 46.88px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+
+}
+
+.score_panel> :first-child {
+    flex-grow: 3;
+    padding: 16px;
+}
+
+.score_panel> :not(:first-child) {
+    width: 139px;
+    height: 128px;
+    gap: 0px;
+    border-radius: 9px;
+    opacity: 0px;
+    background: #FFFFFF;
+    color: #656565;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 16px;
+}
+
+#computer_score,
+#your_score {
+    font-family: "Roboto";
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 79.69px;
+    text-align: center;
+    color: #252525;
+}
+
+.rules {
+    width: 119px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    opacity: 0px;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background: #8CC461;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+.rules_box {
+    width: 303px;
+    height: 367px;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    display: none;
+}
+
+.visible {
+    max-height: 367px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.rule_box_inner_box {
+    width: 278px;
+    height: 325px;
+    gap: 0px;
+    border-radius: 13px;
+    border: 7px solid #FFFFFF;
+    background: #004429;
+    text-align: center;
+    padding-right: 15px;
+
+}
+
+.rule_box_inner_box p {
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 33.98px;
+
+}
+
+.rule_box_inner_box ul {
+    list-style-type: square;
+}
+
+.rule_box_inner_box ul li {
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.23px;
+    text-align: left;
+    color: #ffffff;
+    margin: 10px;
+
+
+}
+
+li::marker {
+    color: #FFD600;
+    font-size: 16px;
+
+}
+
+.close_rule {
+    width: 50px;
+    height: 50px;
+    gap: 0px;
+    border: 5px;
+    border: 5px solid #FFFFFF;
+    border-radius: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    background-color: red;
+}
+
+.close {
+    align-items: center;
+    font-family: "Dangrek";
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 79.49px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -18px;
+
+}
+
+.rock {
+    width: 110px;
+    height: 110px;
+    top: 329px;
+    left: 477px;
+    gap: 0px;
+    opacity: 0px;
+    border: 16px solid #0074B6;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 110px;
+    z-index: 2;
+
+}
+
+.centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scissor {
+    width: 110px;
+    height: 110px;
+    top: 329px;
+    left: 813px;
+    gap: 0px;
+    opacity: 0px;
+    border: 16px solid #BD00FF;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 110px;
+    z-index: 2;
+}
+
+.paper {
+    width: 110px;
+    height: 110px;
+    top: 533px;
+    left: 625px;
+    gap: 0px;
+    opacity: 0px;
+    border: 16px solid #FFA943;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 110px;
+    z-index: 2;
+}
+
+.rock_scissor {
+    width: 233px;
+    height: 0px;
+    top: 393px;
+    left: 582px;
+    gap: 0px;
+    border: 15px 0px 0px 0px;
+    opacity: 0px;
+    border: 15px solid #000000A3;
+    position: absolute;
+    z-index: 1;
+}
+
+.rock_paper {
+    width: 250px;
+    height: 0px;
+    top: 447px;
+    left: 450px;
+    gap: 0px;
+    opacity: 0px;
+    border: 15px solid #000000A3;
+    transform: rotate(60.58deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.scissor_paper {
+    width: 250px;
+    height: 0px;
+    top: 500px;
+    left: 650px;
+    border: 15px solid #000000A3;
+    transform: rotate(130deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.you_picked {
+    width: 140px;
+    height: 140px;
+    top: 415px;
+    left: 353px;
+    gap: 0px;
+    opacity: 0px;
+    border: 16px solid #BD00FF;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 140px;
+
+}
+
+.you_picked_text {
+    width: 113px;
+    height: 16px;
+    top: 344px;
+    left: 383px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    position: absolute;
+    color: #ffffff;
+    z-index: 3;
+
+}
+
+.computer_picked {
+    width: 140px;
+    height: 140px;
+    top: 415px;
+    left: 877px;
+    gap: 0px;
+    opacity: 0px;
+    border: 16px solid #BD00FF;
+    background-color: #ffffff;
+    position: absolute;
+    border-radius: 140px;
+
+}
+
+.computer_picked_text {
+    width: 113px;
+    height: 16px;
+    top: 344px;
+    left: 907px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 19.92px;
+    letter-spacing: 0.1em;
+    position: absolute;
+    color: #ffffff;
+    z-index: 3;
+
+}
+
+.score_text {
+    text-align: center;
+    top: 404px;
+    left: 613px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+
+}
+
+.result_message {
+    gap: 0px;
+    opacity: 0px;
+    font-family: "Roboto";
+    font-size: 39px;
+    font-weight: 800;
+    line-height: 45.7px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.result_message>span {
+    font-family: "Roboto";
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 29.3px;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+}
+
+.btn_play_again {
+    width: 174px;
+    height: 44px;
+    top: 547px;
+    left: 640px;
+    gap: 0px;
+    border-radius: 9px;
+    opacity: 0px;
+    border: none;
+    margin: 0;
+    color: #6B6B6B;
+
+}
+
+.win_final_screen {
+    text-align: center;
+}
+
+.user_win_graphic {
+    background-image: url("/win_photo.png");
+    width: 504px;
+    height: 297px;
+    top: 86px;
+    left: 388px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+
+}
+
+.user_win_graphic>img {
+    width: 200.43px;
+    height: 201px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.hurray {
+    width: 464px;
+    height: 86px;
+    top: 272px;
+    left: 5%;
+    gap: 0px;
+    opacity: 0px;
+    position: relative;
+    font-family: "Roboto";
+    font-size: 91px;
+    font-weight: 600;
+    line-height: 106.64px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.won {
+    color: #ffffff;
+    font-family: "Roboto";
+    font-size: 41px;
+    font-weight: 600;
+    line-height: 48.05px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    height: 48px;
+    top: 203px;
+    left: 3%;
+    gap: 0px;
+    opacity: 0px;
+    position: relative;
+}
+
+.btn_play_again_win {
+    width: 174px;
+    height: 44px;
+    top: 200px;
+    left: 0;
+    gap: 0px;
+    border-radius: 9px;
+    opacity: 0px;
+    border: none;
+    margin: 0;
+    color: #6B6B6B;
+    position: relative;
+
+}
+
+.shadow {
+    box-shadow:
+        0 0 0 62px rgba(46, 154, 37, 0.39),
+        0 0 0 45px rgba(46, 154, 37, 0.7),
+        0 0 0 25px rgba(46, 154, 37, 0.9);
+}
+
+.winner_screen {
+    width: 119px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 2px solid #FFFFFF;
+    opacity: 0px;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    background: #8CC461;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    visibility: hidden;
+}
